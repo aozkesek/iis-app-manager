@@ -1,0 +1,38 @@
+﻿@using Netas.Nipps.SystemManager.Presentation.Models;
+@using Netas.Nipps.SystemManager.Presentation.Base;
+
+@model Nipps
+
+
+    @section featured {
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>@Resources.Global.Deploy</h1>
+                </hgroup>
+            </div>
+        </section>
+    }
+
+    @using (Html.BeginForm("NippsDeploy", "DeployManagement", FormMethod.Post, new { @id="deployForm", @enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        
+        @CommonComponentHelper.NippsHostSitePoolApplication(
+            @Url.Action("", "BackupManagement"), 
+            MaintenanceOperation.Deploy
+            )
+
+        <fieldset>
+            <ol>
+                <li>
+                    <button name="Cancel" onclick="$('#deployForm').attr('action', '@Url.Action("NippsServiceList", "DeployManagement")'); $('#deployForm').submit(); ">@Resources.Global.Cancel</button>
+                    <input type="submit" value="@Resources.Global.Deploy" />
+                </li>
+            </ol>
+        </fieldset>
+         
+        
+    }
+

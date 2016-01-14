@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddNewService" xml:space="preserve">
+    <value>Yeni Servis Ekle</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Uygulama Adı</value>
+  </data>
+  <data name="ApplicationPoolName" xml:space="preserve">
+    <value>Uygulama Havuzu Adı</value>
+  </data>
+  <data name="Backup" xml:space="preserve">
+    <value>Yedekle</value>
+  </data>
+  <data name="BackupTitle" xml:space="preserve">
+    <value>Sistem Bakımı - Yedekle</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Vazgeç</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>Kategori Adı</value>
+  </data>
+  <data name="Deploy" xml:space="preserve">
+    <value>Yükle</value>
+  </data>
+  <data name="DeployTitle" xml:space="preserve">
+    <value>Sistem Bakımı  - Yükle</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Yapıldı</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Eposta</value>
+  </data>
+  <data name="FinishDate" xml:space="preserve">
+    <value>Bitiş Tarihi</value>
+  </data>
+  <data name="HostName" xml:space="preserve">
+    <value>Sunucu Adı</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Soyadı</value>
+  </data>
+  <data name="LogArchiveAboveSize" xml:space="preserve">
+    <value>Arşiv Büyüklüğü</value>
+  </data>
+  <data name="LogArchiveEvery" xml:space="preserve">
+    <value>Arşiv Aralığı</value>
+  </data>
+  <data name="LogDownloadAll" xml:space="preserve">
+    <value>Tüm LOG Dosyalarını İndir</value>
+  </data>
+  <data name="LogDownloadAllTitle" xml:space="preserve">
+    <value>Sistem Durumu - Tüm LOG Dosyalarını İndir</value>
+  </data>
+  <data name="LogLevelChange" xml:space="preserve">
+    <value>LOG Seviyesi Değişiklik</value>
+  </data>
+  <data name="LogMaxArchiveFile" xml:space="preserve">
+    <value>Arşiv Sayısı</value>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="Logon" xml:space="preserve">
+    <value>Giriş</value>
+  </data>
+  <data name="LogonMessage" xml:space="preserve">
+    <value>Kullanıcı adı ve şifrenizi girin</value>
+  </data>
+  <data name="LogParametersChange" xml:space="preserve">
+    <value>LOG Ayarları Değişiklik</value>
+  </data>
+  <data name="LogParametersChangeTitle" xml:space="preserve">
+    <value>Sistem Durumu - LOG Ayarları Değişiklik</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>LOGlar</value>
+  </data>
+  <data name="MenuAbout" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="MenuContact" xml:space="preserve">
+    <value>İletişim</value>
+  </data>
+  <data name="MenuMainPage" xml:space="preserve">
+    <value>Ana Sayfa</value>
+  </data>
+  <data name="MenuNippsManagement" xml:space="preserve">
+    <value>NIPPS Yönetimi</value>
+  </data>
+  <data name="MenuSystemLicense" xml:space="preserve">
+    <value>Sistem Lisansı</value>
+  </data>
+  <data name="MenuSystemMaintenance" xml:space="preserve">
+    <value>Sistem Bakımı</value>
+  </data>
+  <data name="MenuSystemParameters" xml:space="preserve">
+    <value>Sistem Parametreleri</value>
+  </data>
+  <data name="MenuSystemStatus" xml:space="preserve">
+    <value>Sistem Durumu</value>
+  </data>
+  <data name="MenuSystemVersions" xml:space="preserve">
+    <value>Sürüm Numaraları</value>
+  </data>
+  <data name="MenuUserManagement" xml:space="preserve">
+    <value>Kullanıcı Yönetimi</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Adı</value>
+  </data>
+  <data name="NippsTitle" xml:space="preserve">
+    <value>NETAŞ - IP Telefon Servisleri Sistem Yönetimi</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Diğer</value>
+  </data>
+  <data name="Parameter" xml:space="preserve">
+    <value>Parametre</value>
+  </data>
+  <data name="ParameterChange" xml:space="preserve">
+    <value>Parametre Değiştir</value>
+  </data>
+  <data name="ParameterTitle" xml:space="preserve">
+    <value>Sistem Parametreleri</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="PasswordChange" xml:space="preserve">
+    <value>Şifre Değiştir</value>
+  </data>
+  <data name="PasswordConfirm" xml:space="preserve">
+    <value>Yeni Şifre Tekrar</value>
+  </data>
+  <data name="PasswordForgotten" xml:space="preserve">
+    <value>Şifremi Unuttum</value>
+  </data>
+  <data name="PasswordNew" xml:space="preserve">
+    <value>Yeni Şifre</value>
+  </data>
+  <data name="PasswordRenew" xml:space="preserve">
+    <value>Yeni Şifre Gönder</value>
+  </data>
+  <data name="Recycle" xml:space="preserve">
+    <value>Tekrar Başlat</value>
+  </data>
+  <data name="RecycleTitle" xml:space="preserve">
+    <value>Sistem Bakımı  - Tekrar Başlat</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Geri Yükle</value>
+  </data>
+  <data name="RestoreTitle" xml:space="preserve">
+    <value>Sistem Bakımı  - Geri Yükle</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>Seçiminizi yapın</value>
+  </data>
+  <data name="SiteName" xml:space="preserve">
+    <value>Site Adı</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Başlangıç Tarihi</value>
+  </data>
+  <data name="Started" xml:space="preserve">
+    <value>Başlatıldı</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="Stopped" xml:space="preserve">
+    <value>Durduruldu</value>
+  </data>
+  <data name="Undeploy" xml:space="preserve">
+    <value>Kaldır</value>
+  </data>
+  <data name="UndeployTitle" xml:space="preserve">
+    <value>Sistem Bakımı  - Kaldır</value>
+  </data>
+  <data name="Upgrade" xml:space="preserve">
+    <value>Sürüm Yükselt</value>
+  </data>
+  <data name="UpgradeTitle" xml:space="preserve">
+    <value>Sistem Bakımı  - Sürüm Yükselt</value>
+  </data>
+  <data name="UserAdd" xml:space="preserve">
+    <value>Kullanıcı Ekle</value>
+  </data>
+  <data name="UserAddTitle" xml:space="preserve">
+    <value>Kullanıcı Yönetimi - Kullanıcı Ekle</value>
+  </data>
+  <data name="UserEdit" xml:space="preserve">
+    <value>Kullanıcı Güncelle</value>
+  </data>
+  <data name="UserEditTitle" xml:space="preserve">
+    <value>Kullanıcı Yönetimi - Kullanıcı Güncelle</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Kullanıcı Adı</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Değeri</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Sürüm Numarası</value>
+  </data>
+  <data name="ZipFileSelect" xml:space="preserve">
+    <value>Yüklenecek ZIP dosyasını seçin</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>İndir</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Hatalı</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Bilgi</value>
+  </data>
+  <data name="LogInfo" xml:space="preserve">
+    <value>LOG Bilgisi</value>
+  </data>
+  <data name="LogLevel" xml:space="preserve">
+    <value>LOG Seviyesi</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>Çalışıyor</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Servis</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Bilinmiyor</value>
+  </data>
+  <data name="ConfigBackup" xml:space="preserve">
+    <value>Ayarları Yedekle</value>
+  </data>
+  <data name="ConfigRestore" xml:space="preserve">
+    <value>Ayarları Geri Yükle</value>
+  </data>
+  <data name="EmptyTable" xml:space="preserve">
+    <value>Kayıt bulunmuyor</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>İlk</value>
+  </data>
+  <data name="InfoFiltered" xml:space="preserve">
+    <value>(_MAX_ kayıt arasından seçildi)</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Son</value>
+  </data>
+  <data name="LengthMenu" xml:space="preserve">
+    <value>_MENU_ kayıt göster</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Sonraki</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Önceki</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Ara</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>İletişim</value>
+  </data>
+  <data name="UserRemove" xml:space="preserve">
+    <value>Kullanıcı Sil</value>
+  </data>
+  <data name="UserRemoveTitle" xml:space="preserve">
+    <value>Kullanıcı Yönetimi - Kullanıcı Sil</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Durdur</value>
+  </data>
+  <data name="LogDownload" xml:space="preserve">
+    <value>LOG Dosyalarını İndir</value>
+  </data>
+  <data name="ExpandCollapse" xml:space="preserve">
+    <value>Detay Göster / Gizle</value>
+  </data>
+  <data name="AdminCanNotDeletedException" xml:space="preserve">
+    <value>Admin kullanıcısını silemezsiniz</value>
+  </data>
+  <data name="CreateDate" xml:space="preserve">
+    <value>Yaratılma Tarihi</value>
+  </data>
+  <data name="ProductList" xml:space="preserve">
+    <value>Uygulamalar</value>
+  </data>
+  <data name="UpdateDate" xml:space="preserve">
+    <value>Değiştirme Tarihi</value>
+  </data>
+  <data name="LogSMDownloadAll" xml:space="preserve">
+    <value>Tüm SM LOG Dosyalarını İndir</value>
+  </data>
+  <data name="ValAccept" xml:space="preserve">
+    <value>Please enter a value with a valid extension.</value>
+  </data>
+  <data name="ValCreditcard" xml:space="preserve">
+    <value>Lütfen geçerli bir kredi kartı numarası girin.</value>
+  </data>
+  <data name="ValDate" xml:space="preserve">
+    <value>Lütfen geçerli bir tarih girin.</value>
+  </data>
+  <data name="ValDateISO" xml:space="preserve">
+    <value>Lütfen geçerli bir tarih (ISO) girin.</value>
+  </data>
+  <data name="ValDigits" xml:space="preserve">
+    <value>Lütfen sadece rakam girin.</value>
+  </data>
+  <data name="ValEmail" xml:space="preserve">
+    <value>Lütfen geçerli bir e-posta adresi girin.</value>
+  </data>
+  <data name="ValEqualTo" xml:space="preserve">
+    <value>Lütfen aynı bilgiyi tekrar girin.</value>
+  </data>
+  <data name="ValMax" xml:space="preserve">
+    <value>Lütfen {0} e eşit veya küçük bir değer girin.</value>
+  </data>
+  <data name="ValMaxLength" xml:space="preserve">
+    <value>Lütfen {0} den daha az karakter girin.</value>
+  </data>
+  <data name="ValMin" xml:space="preserve">
+    <value>Lütfen {0} e eşit veya büyük bir değer girin.</value>
+  </data>
+  <data name="ValMinLength" xml:space="preserve">
+    <value>Lütfen en az {0} karakter girin.</value>
+  </data>
+  <data name="ValNumber" xml:space="preserve">
+    <value>Lütfen geçerli bir numara girin.</value>
+  </data>
+  <data name="ValRange" xml:space="preserve">
+    <value>Lütfen {0} ile {1} arasında bir değer girin.</value>
+  </data>
+  <data name="ValRangeLength" xml:space="preserve">
+    <value>Lütfen {0} ile {1} karakter uzunluğu arasında bir değer girin.</value>
+  </data>
+  <data name="ValRemote" xml:space="preserve">
+    <value>Please fix this field.</value>
+  </data>
+  <data name="ValRequired" xml:space="preserve">
+    <value>Bu alana bilgi girilmesi zorunludur.</value>
+  </data>
+  <data name="ValUrl" xml:space="preserve">
+    <value>Lütfen geçerli bir URL girin.</value>
+  </data>
+  <data name="MessageExpiredPassword" xml:space="preserve">
+    <value>Şifrenizin kullanım süresi geçmiş.</value>
+  </data>
+  <data name="MessageInvalidPassword" xml:space="preserve">
+    <value>Şifreniz hatalıdır.</value>
+  </data>
+  <data name="MessageInvalidUsername" xml:space="preserve">
+    <value>Kullanıcı kodunuz hatalıdır.</value>
+  </data>
+  <data name="MessageInvalidValues" xml:space="preserve">
+    <value>Geçersiz değerler girildi.</value>
+  </data>
+  <data name="MessageUnknownError" xml:space="preserve">
+    <value>Bilinmeyen hata.  Lütfen daha fazla bilgi için sistem loguna bakın.</value>
+  </data>
+  <data name="MessageFail" xml:space="preserve">
+    <value>{0} yapılamadı.</value>
+  </data>
+  <data name="MessageOk" xml:space="preserve">
+    <value>{0} yapıldı.</value>
+  </data>
+  <data name="MessageWarn" xml:space="preserve">
+    <value>{0} bazıları yapıldı.</value>
+  </data>
+  <data name="AlarmReset" xml:space="preserve">
+    <value>Uyarıları Sıfırla</value>
+  </data>
+  <data name="MenuOperationalMetrics" xml:space="preserve">
+    <value>Kullanım Değerleri</value>
+  </data>
+  <data name="MessageRenewPassword" xml:space="preserve">
+    <value>Yeni şifre oluşturuldu ve kullanıcıya e-posta ile gönderildi.</value>
+  </data>
+  <data name="LogReset" xml:space="preserve">
+    <value>LOGları Sıfırla</value>
+  </data>
+  <data name="LogResetTitle" xml:space="preserve">
+    <value>Sistem Durumu - LOGları Sıfırla</value>
+  </data>
+  <data name="MessageHostSelect" xml:space="preserve">
+    <value>Bir Sunucu seçin</value>
+  </data>
+  <data name="MessagePoolSelect" xml:space="preserve">
+    <value>Bir Uygulama Havuzu seçin</value>
+  </data>
+  <data name="MessageSiteSelect" xml:space="preserve">
+    <value>Bir Site seçin</value>
+  </data>
+  <data name="TotalRequestCount" xml:space="preserve">
+    <value>Toplam İşlem İstek Sayısı</value>
+  </data>
+  <data name="TotalUnhandledErrorCount" xml:space="preserve">
+    <value>Toplam Kontrol Edilmeyen Hata Sayısı</value>
+  </data>
+  <data name="MessageClickForChange" xml:space="preserve">
+    <value>Değiştirmek için tıklayın</value>
+  </data>
+  <data name="MessageConfirmRestartPool" xml:space="preserve">
+    <value>Bu havuzdaki tüm uygulamalar tekrar başlatılacak, emin misiniz?</value>
+  </data>
+  <data name="MessageConfirmStopPool" xml:space="preserve">
+    <value>Bu havuzdaki tüm uygulamalar durdurulacaktır, emin misiniz?</value>
+  </data>
+  <data name="MessageRemoveAppConfirm" xml:space="preserve">
+    <value>kaldırılacaktır, emin misiniz?</value>
+  </data>
+  <data name="MessageInvalidPasswordEntered" xml:space="preserve">
+    <value>Hatalı şifre girildi.</value>
+  </data>
+  <data name="MessagePasswordChanged" xml:space="preserve">
+    <value>Şifreniz değiştirildi.</value>
+  </data>
+  <data name="MessageDownloadAllLogs" xml:space="preserve">
+    <value>{0} ile {1} arasındaki tüm LOG dosyalarını getir.</value>
+  </data>
+  <data name="MessageInvalidFinishDate" xml:space="preserve">
+    <value>BitişTarihi, BaşlangıçTarihin'den küçük, Bugün'den büyük olamaz.</value>
+  </data>
+  <data name="IssuedBy" xml:space="preserve">
+    <value>Lisanslayan</value>
+  </data>
+  <data name="LicensedTo" xml:space="preserve">
+    <value>Lisanslanan</value>
+  </data>
+  <data name="LoadLicense" xml:space="preserve">
+    <value>Lisans Yükle</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Geçerli</value>
+  </data>
+  <data name="LicenseAdd" xml:space="preserve">
+    <value>Lisans Ekle</value>
+  </data>
+  <data name="LicenseAddTitle" xml:space="preserve">
+    <value>Sistem Lisans - Lisans Ekle</value>
+  </data>
+  <data name="LicenseFileSelect" xml:space="preserve">
+    <value>Lisans Dosyası Seç</value>
+  </data>
+</root>

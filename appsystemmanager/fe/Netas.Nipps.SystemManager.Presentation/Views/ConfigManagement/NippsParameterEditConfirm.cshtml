@@ -1,0 +1,39 @@
+﻿@model Netas.Nipps.ConfigManager.Data.Model.NippsParameter
+
+    @section featured {
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>@Resources.Global.ParameterChange</h1>
+                </hgroup>
+            </div>
+        </section>
+    }
+
+    @using (Html.BeginForm("NippsParameterEdit", "ConfigManagement", FormMethod.Post, new { id="paramForm" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+        <fieldset>
+            <ol>
+                @Html.HiddenFor(m => m.CategoryName)
+                @Html.HiddenFor(m => m.ParameterName)
+                <li>
+                    @Html.Label(Resources.Global.CategoryName)
+                    @Html.TextBoxFor(m => m.CategoryName, new { @readonly = "readonly" })
+                </li>
+                <li>
+                    @Html.Label(Resources.Global.Name)
+                    @Html.TextBoxFor(m => m.ParameterName, new { @readonly = "readonly" })
+                </li>
+                <li>
+                    @Html.Label(Resources.Global.Value)
+                    @Html.TextAreaFor(m => m.ParameterValue)
+                </li>
+                <li>
+                    <button class="cancel" onclick="$('#paramForm').Nipps_SubmitTo('@Url.Action("NippsParameterList", "ConfigManagement")', 'Get'); ">@Resources.Global.Cancel</button>
+                    <input type="submit" value="@Resources.Global.Save" />
+                </li>
+            </ol>
+        </fieldset>
+    }

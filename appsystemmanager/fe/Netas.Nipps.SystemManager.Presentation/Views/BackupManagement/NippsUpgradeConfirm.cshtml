@@ -1,0 +1,37 @@
+﻿@model Netas.Nipps.SystemManager.Presentation.Models.Nipps
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@Resources.Global.UpgradeTitle</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+@using (Html.BeginForm("NippsUpgrade", "BackupManagement", FormMethod.Post, new { @id="upgradeForm" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    
+    @CommonComponentHelper.NippsHostSitePoolApplication(
+        @Url.Action("", "BackupManagement"), 
+        Netas.Nipps.SystemManager.Presentation.Base.MaintenanceOperation.Upgrade, 
+        Model)
+
+    <fieldset>
+        <ol>
+            <li>
+                @Html.Label(Resources.Global.Upgrade)
+                @Html.TextBox("Upgrade", (string)ViewBag.UpgradeItem, new { @style="width:600px;", @readonly="true" })
+            </li>
+            <li>
+                <button class="cancel" onclick="$('#upgradeForm').Nipps_SubmitTo('@Url.Action("NippsServiceList", "DeployManagement")', 'Get'); ">@Resources.Global.Cancel</button>
+                <input type="submit" value="@Resources.Global.Upgrade" />
+            </li>
+        </ol>
+    </fieldset>
+    
+
+}

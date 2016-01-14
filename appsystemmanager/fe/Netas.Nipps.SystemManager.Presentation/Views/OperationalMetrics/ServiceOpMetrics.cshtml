@@ -1,0 +1,95 @@
+﻿@using Netas.Nipps.SystemManager.Presentation.Models;
+@using Netas.Nipps.BaseDao.Model.Response;
+@using Netas.Nipps.BaseService;
+
+@using System.Web.Mvc;
+
+@model Nipps
+
+@{
+    string urlMetric = Url.Action("ServiceOpMetricDetail");
+    string urlEnableMetric = Url.Action("ServiceOpMetricEnable");    
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@Resources.Global.MenuOperationalMetrics - @Model.ApplicationName</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<table id="serviceListTable" class="display compact">
+
+    <thead>
+        <tr>
+            <th></th>
+            <th>@Resources.Global.Service</th>
+        </tr>
+    </thead>
+
+    <tbody></tbody>
+
+</table>
+
+<script type="text/javascript">
+
+    var tableData = new Array();
+    var activeIcons = new Array('../Images/switch-off-icon.png', '../Images/switch-on-icon.png');
+    var activeTitles = new Array('@Resources.Global.Stopped', '@Resources.Global.Started');
+
+    @if (ViewBag.Result == Result.OK)
+    {
+        string headers;
+        foreach (NippsOperationalMetric nippsOpMetric in ViewBag.ResultList)
+        {
+            headers = "";
+            foreach(string header in nippsOpMetric.Headers)
+            {
+                headers += header + "|";
+            }
+
+    <text>
+    tableData.push({
+        "Name": "@nippsOpMetric.Name"
+        , "Path": "@nippsOpMetric.Path"
+        , "Headers": "@headers"
+        , "Active": "@(nippsOpMetric.Active ? 1:0)"
+    });
+    </text>
+        }
+    }
+
+    $("#serviceListTable").DataTable({
+        data: tableData
+        , order: [[1, 'asc']]
+        , language: DataTableLanguage
+        , columnDefs: [
+            {
+                targets: 0
+                , width: 24
+                , orderable: false
+                , searchable: false
+                , data: function (row) {
+                    return '<a href="@urlEnableMetric?HostName=@Model.HostName&SiteName=@Model.SiteName&ApplicationName=@Model.ApplicationName&Path=' + row.Path + '&Name=' + row.Name + '">'
+                        + '<img class="gridRowInlineLink" src="' + activeIcons[row.Active] + '" title="' + activeTitles[row.Active] + ' - @Resources.Global.MessageClickForChange" />'
+                        + '</a>';
+                }
+            }
+            , {
+                targets: 1
+                , data: function (row) {
+                    if (row.Active == 1)
+                        return '<a href="@urlMetric?HostName=@Model.HostName&SiteName=@Model.SiteName&ApplicationName=@Model.ApplicationName&Path=' + row.Path + '&Name=' + row.Name + '&Headers=' + row.Headers + '">'
+                            + row.Name
+                            + '</a>';
+                    else
+                        return row.Name;
+                }
+            }
+        ]
+    });
+</script>
+

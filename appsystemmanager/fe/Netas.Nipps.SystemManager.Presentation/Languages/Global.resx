@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddNewService" xml:space="preserve">
+    <value>Add New Service</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Application Name</value>
+  </data>
+  <data name="ApplicationPoolName" xml:space="preserve">
+    <value>Application Pool Name</value>
+  </data>
+  <data name="Backup" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="BackupTitle" xml:space="preserve">
+    <value>System Maintenance - Backup</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+  <data name="Deploy" xml:space="preserve">
+    <value>Deploy</value>
+  </data>
+  <data name="DeployTitle" xml:space="preserve">
+    <value>System Maintenance - Deploy</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="FinishDate" xml:space="preserve">
+    <value>Finish Date</value>
+  </data>
+  <data name="HostName" xml:space="preserve">
+    <value>Host Name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LogArchiveAboveSize" xml:space="preserve">
+    <value>Archive Above Size</value>
+  </data>
+  <data name="LogArchiveEvery" xml:space="preserve">
+    <value>Archive Every</value>
+  </data>
+  <data name="LogDownloadAll" xml:space="preserve">
+    <value>Download All Logs</value>
+  </data>
+  <data name="LogDownloadAllTitle" xml:space="preserve">
+    <value>System Status - Download All Logs</value>
+  </data>
+  <data name="LogLevelChange" xml:space="preserve">
+    <value>Change Log Level</value>
+  </data>
+  <data name="LogMaxArchiveFile" xml:space="preserve">
+    <value>Max Archive File</value>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>Logoff</value>
+  </data>
+  <data name="Logon" xml:space="preserve">
+    <value>Logon</value>
+  </data>
+  <data name="LogonMessage" xml:space="preserve">
+    <value>Enter your user name and password</value>
+  </data>
+  <data name="LogParametersChange" xml:space="preserve">
+    <value>Change Log Parameters</value>
+  </data>
+  <data name="LogParametersChangeTitle" xml:space="preserve">
+    <value>System Status - Change Log Parameters</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="MenuAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="MenuContact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="MenuMainPage" xml:space="preserve">
+    <value>Main Page</value>
+  </data>
+  <data name="MenuNippsManagement" xml:space="preserve">
+    <value>NIPPS Management</value>
+  </data>
+  <data name="MenuSystemLicense" xml:space="preserve">
+    <value>System License</value>
+  </data>
+  <data name="MenuSystemMaintenance" xml:space="preserve">
+    <value>System Maintenance</value>
+  </data>
+  <data name="MenuSystemParameters" xml:space="preserve">
+    <value>Sytem Parameters</value>
+  </data>
+  <data name="MenuSystemStatus" xml:space="preserve">
+    <value>System Status</value>
+  </data>
+  <data name="MenuSystemVersions" xml:space="preserve">
+    <value>Versions</value>
+  </data>
+  <data name="MenuUserManagement" xml:space="preserve">
+    <value>User Management</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NippsTitle" xml:space="preserve">
+    <value>NETAS - IP Phone Services System Manager</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Parameter" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="ParameterChange" xml:space="preserve">
+    <value>Change Parameter</value>
+  </data>
+  <data name="ParameterTitle" xml:space="preserve">
+    <value>System Parameters</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordChange" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="PasswordConfirm" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
+  <data name="PasswordForgotten" xml:space="preserve">
+    <value>Forgotten Password</value>
+  </data>
+  <data name="PasswordNew" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="PasswordRenew" xml:space="preserve">
+    <value>Send New Password</value>
+  </data>
+  <data name="Recycle" xml:space="preserve">
+    <value>Recycle</value>
+  </data>
+  <data name="RecycleTitle" xml:space="preserve">
+    <value>System Maintenance - Recycle</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="RestoreTitle" xml:space="preserve">
+    <value>System Maintenance - Restore</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>Select an item</value>
+  </data>
+  <data name="SiteName" xml:space="preserve">
+    <value>Site Name</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Started" xml:space="preserve">
+    <value>Started</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Stopped" xml:space="preserve">
+    <value>Stopped</value>
+  </data>
+  <data name="Undeploy" xml:space="preserve">
+    <value>Undeploy</value>
+  </data>
+  <data name="UndeployTitle" xml:space="preserve">
+    <value>System Maintenance - Undeploy</value>
+  </data>
+  <data name="Upgrade" xml:space="preserve">
+    <value>Upgrade</value>
+  </data>
+  <data name="UpgradeTitle" xml:space="preserve">
+    <value>System Maintenance - Upgrade</value>
+  </data>
+  <data name="UserAdd" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="UserAddTitle" xml:space="preserve">
+    <value>User Management - Add User</value>
+  </data>
+  <data name="UserEdit" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="UserEditTitle" xml:space="preserve">
+    <value>User Management - Edit User</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="UserRemove" xml:space="preserve">
+    <value>User Remove</value>
+  </data>
+  <data name="UserRemoveTitle" xml:space="preserve">
+    <value>User Management - User Remove</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="ZipFileSelect" xml:space="preserve">
+    <value>Select a ZIP file to deploy </value>
+  </data>
+  <data name="CreateDate" xml:space="preserve">
+    <value>Create Date</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="LogInfo" xml:space="preserve">
+    <value>Log Info</value>
+  </data>
+  <data name="LogLevel" xml:space="preserve">
+    <value>Log Level</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="UpdateDate" xml:space="preserve">
+    <value>Update Date</value>
+  </data>
+  <data name="ConfigBackup" xml:space="preserve">
+    <value>Config Backup</value>
+  </data>
+  <data name="ConfigRestore" xml:space="preserve">
+    <value>Config Restore</value>
+  </data>
+  <data name="EmptyTable" xml:space="preserve">
+    <value>No data available</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="InfoFiltered" xml:space="preserve">
+    <value>(filtered from _MAX_ records)</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="LengthMenu" xml:space="preserve">
+    <value>Show _MENU_ records</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="LogDownload" xml:space="preserve">
+    <value>Download Logs</value>
+  </data>
+  <data name="ExpandCollapse" xml:space="preserve">
+    <value>Expand / Collapse</value>
+  </data>
+  <data name="AdminCanNotDeletedException" xml:space="preserve">
+    <value>You can not delete the Admin</value>
+  </data>
+  <data name="ProductList" xml:space="preserve">
+    <value>Product List</value>
+  </data>
+  <data name="LogSMDownloadAll" xml:space="preserve">
+    <value>Download All SM Logs</value>
+  </data>
+  <data name="ValAccept" xml:space="preserve">
+    <value>Please enter a value with a valid extension.</value>
+  </data>
+  <data name="ValCreditcard" xml:space="preserve">
+    <value>Please enter a valid credit card number.</value>
+  </data>
+  <data name="ValDate" xml:space="preserve">
+    <value>Please enter a valid date.</value>
+  </data>
+  <data name="ValDateISO" xml:space="preserve">
+    <value>Please enter a valid date (ISO).</value>
+  </data>
+  <data name="ValDigits" xml:space="preserve">
+    <value>Please enter only digits.</value>
+  </data>
+  <data name="ValEmail" xml:space="preserve">
+    <value>Please enter a valid email address.</value>
+  </data>
+  <data name="ValEqualTo" xml:space="preserve">
+    <value>Please enter the same value again.</value>
+  </data>
+  <data name="ValMax" xml:space="preserve">
+    <value>Please enter a value less than or equal to {0}.</value>
+  </data>
+  <data name="ValMaxLength" xml:space="preserve">
+    <value>Please enter no more than {0} characters.</value>
+  </data>
+  <data name="ValMin" xml:space="preserve">
+    <value>Please enter a value greater than or equal to {0}.</value>
+  </data>
+  <data name="ValMinLength" xml:space="preserve">
+    <value>Please enter at least {0} characters.</value>
+  </data>
+  <data name="ValNumber" xml:space="preserve">
+    <value>Please enter a valid number.</value>
+  </data>
+  <data name="ValRange" xml:space="preserve">
+    <value>Please enter a value between {0} and {1}.</value>
+  </data>
+  <data name="ValRangeLength" xml:space="preserve">
+    <value>Please enter a value between {0} and {1} characters long.</value>
+  </data>
+  <data name="ValRemote" xml:space="preserve">
+    <value>Please fix this field.</value>
+  </data>
+  <data name="ValRequired" xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+  <data name="ValUrl" xml:space="preserve">
+    <value>Please enter a valid URL.</value>
+  </data>
+  <data name="MessageExpiredPassword" xml:space="preserve">
+    <value>Password is expired.</value>
+  </data>
+  <data name="MessageInvalidPassword" xml:space="preserve">
+    <value>Password is invalid.</value>
+  </data>
+  <data name="MessageInvalidUsername" xml:space="preserve">
+    <value>Username is invalid.</value>
+  </data>
+  <data name="MessageInvalidValues" xml:space="preserve">
+    <value>Invalid values entered.</value>
+  </data>
+  <data name="MessageUnknownError" xml:space="preserve">
+    <value>Unknown error.  Please check the system logs for more detail.</value>
+  </data>
+  <data name="MessageFail" xml:space="preserve">
+    <value>{0} is failed.</value>
+  </data>
+  <data name="MessageOk" xml:space="preserve">
+    <value>{0} is done.</value>
+  </data>
+  <data name="MessageWarn" xml:space="preserve">
+    <value>{0} is partial done.</value>
+  </data>
+  <data name="AlarmReset" xml:space="preserve">
+    <value>Reset Alarms</value>
+  </data>
+  <data name="MenuOperationalMetrics" xml:space="preserve">
+    <value>Operational Metrics</value>
+  </data>
+  <data name="MessageRenewPassword" xml:space="preserve">
+    <value>New password is created and sent via e-mail to the user.</value>
+  </data>
+  <data name="LogReset" xml:space="preserve">
+    <value>Reset Logs</value>
+  </data>
+  <data name="LogResetTitle" xml:space="preserve">
+    <value>System Status - Reset Logs</value>
+  </data>
+  <data name="MessageHostSelect" xml:space="preserve">
+    <value>Select a Host</value>
+  </data>
+  <data name="MessagePoolSelect" xml:space="preserve">
+    <value>Select an Apllication Pool</value>
+  </data>
+  <data name="MessageSiteSelect" xml:space="preserve">
+    <value>Select a Site</value>
+  </data>
+  <data name="TotalRequestCount" xml:space="preserve">
+    <value>Total Request Count</value>
+  </data>
+  <data name="TotalUnhandledErrorCount" xml:space="preserve">
+    <value>Total Unhandled Error Count</value>
+  </data>
+  <data name="MessageClickForChange" xml:space="preserve">
+    <value>Click for change value</value>
+  </data>
+  <data name="MessageConfirmRestartPool" xml:space="preserve">
+    <value>Every application in this pool will restart, are you sure?</value>
+  </data>
+  <data name="MessageConfirmStopPool" xml:space="preserve">
+    <value>Every application in this pool will stop, are you sure?</value>
+  </data>
+  <data name="MessageRemoveAppConfirm" xml:space="preserve">
+    <value>will remove, are you sure?</value>
+  </data>
+  <data name="MessageInvalidPasswordEntered" xml:space="preserve">
+    <value>Invalid password is entered.</value>
+  </data>
+  <data name="MessagePasswordChanged" xml:space="preserve">
+    <value>Password is changed.</value>
+  </data>
+  <data name="MessageDownloadAllLogs" xml:space="preserve">
+    <value>Download all logs between {0} and {1}</value>
+  </data>
+  <data name="MessageInvalidFinishDate" xml:space="preserve">
+    <value>FinishDate can not be less than StartDate or greater than Now </value>
+  </data>
+  <data name="IssuedBy" xml:space="preserve">
+    <value>Issued By</value>
+  </data>
+  <data name="LicensedTo" xml:space="preserve">
+    <value>Licensed To</value>
+  </data>
+  <data name="LoadLicense" xml:space="preserve">
+    <value>Load License</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Valid</value>
+  </data>
+  <data name="LicenseAdd" xml:space="preserve">
+    <value>Add License</value>
+  </data>
+  <data name="LicenseAddTitle" xml:space="preserve">
+    <value>System License - Add License</value>
+  </data>
+  <data name="LicenseFileSelect" xml:space="preserve">
+    <value>Select License File</value>
+  </data>
+</root>

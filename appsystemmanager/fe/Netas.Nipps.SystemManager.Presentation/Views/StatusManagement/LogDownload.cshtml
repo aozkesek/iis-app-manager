@@ -1,0 +1,44 @@
+﻿@*  
+    PARTIAL-VIEW
+    
+    *@
+
+@using Netas.Nipps.BaseService;
+@using Netas.Nipps.BaseDao.Model.Response;
+@using Netas.Nipps.LogManager.Data.Model;
+
+@model NippsModule
+
+<table id="logFilesTable" class="display compact">
+    <thead>
+        <tr>
+            <th>@Resources.Global.Download</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (ViewBag.Result == Result.OK)
+        {
+            foreach (NippsLogFile logFile in ViewBag.ResultList)
+            {
+                <tr>
+                    <td>
+                        <a href="@logFile.LogFileContent">@logFile.LogFileName</a>
+                    </td>
+
+                </tr>
+            }
+        }
+    </tbody>
+
+</table>
+
+<script type="text/javascript">
+
+    $("#logFilesTable").DataTable({
+        language: DataTableLanguage
+        
+    });
+
+
+</script>

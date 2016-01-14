@@ -1,0 +1,24 @@
+﻿@model Netas.Nipps.SystemManager.Presentation.Models.Nipps
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@Resources.Global.BackupTitle</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+@using (Html.BeginForm("NippsConfigBackup", "BackupManagement", FormMethod.Post, new { @id="backupForm" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    
+    <label>Sistem ayarlarınızın yedeklenmesi yapılacaktır...</label>
+    
+    <button class="cancel" onclick="$('#backupForm').Nipps_SubmitTo('@Url.Action("NippsServiceList", "DeployManagement")', 'Get'); ">@Resources.Global.Cancel</button>
+    <input type="submit" value="@Resources.Global.Backup" />
+
+}
+

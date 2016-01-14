@@ -1,0 +1,69 @@
+﻿@using Netas.Nipps.SystemManager.Presentation.Models;
+
+@model IEnumerable<Product>
+
+    @section featured {
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>@Resources.Global.ProductList</h1>
+                </hgroup>
+            </div>
+        </section>
+    }
+
+<table id="fileListTable" class="display compact">
+    <thead>
+        <tr>
+            <th></th>
+            <th>@Resources.Global.Name</th>
+            <th>@Resources.Global.Version</th>
+            <th>@Resources.Global.ApplicationPoolName</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+
+</table>
+
+<script type="text/javascript">
+
+    function subGrid(data) {
+        var rc = '<table style="position:relative; left: 40px;"><thead><th></th><th>@Resources.Global.Name</th><th>@Resources.Global.Version</th></thead><tbody>';
+        for (i = 0; i < data.Components.length; i++)
+            rc += '<tr><td style="width: 40px;"></td><td>' + data.Components[i].Name + '</td><td>' + data.Components[i].Version + '</td></tr>';
+        rc += '</tbody></table>';
+        return rc;
+    }
+
+    var fileData = JSON.parse('@Json.Encode(Model)'.replace(/&quot;/g, '"'));
+
+    var fileListTable = $("#fileListTable").DataTable({
+        data: fileData,
+        order: [[1, 'asc']],
+        language: DataTableLanguage,
+        columns: [
+            { className: 'details-control', orderable: false, data: null, defaultContent: '<img src="../Images/addIcon.png" title="@Resources.Global.ExpandCollapse">', width: 18 },
+            { data: "Name" },
+            { data: "Version" },
+            { data: "ApplicationPool" }
+        ]
+    });
+
+    $('#fileListTable tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = fileListTable.row(tr);
+
+        if (row.child.isShown()) {
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            row.child(subGrid(row.data())).show();
+            tr.addClass('shown');
+        }
+    });
+
+</script> 

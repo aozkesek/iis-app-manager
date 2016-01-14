@@ -1,0 +1,43 @@
+﻿@using System.Web.Mvc;
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+@{
+    List<string> resultMessages = (List<string>)ViewBag.ResultMessages;
+    
+    if (string.IsNullOrEmpty(ViewBag.ReturnToAction))
+    {
+        ViewBag.ReturnToAction = "Index";
+        ViewBag.ReturnToController = "Home";
+    }
+    
+}
+
+@using (Html.BeginForm((string)ViewBag.ReturnToAction, (string)ViewBag.ReturnToController, FormMethod.Get))
+{   
+    
+    <fieldset>
+        <ol>
+            <li>@(resultMessages == null || resultMessages.Count == 0 ? ViewBag.Result : "")</li>
+            
+            @foreach (string message in resultMessages)
+            {
+            <text><li>@message</li></text>
+            }
+            
+            @if (ViewBag.OkButton == null || (bool)ViewBag.OkButton)
+            {
+                <li><input type="submit" value="@Resources.Global.Ok" /></li>
+            }
+        </ol>
+    </fieldset>
+    
+}
