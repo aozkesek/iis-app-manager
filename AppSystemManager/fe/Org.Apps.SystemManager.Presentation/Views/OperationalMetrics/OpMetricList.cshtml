@@ -1,0 +1,76 @@
+﻿@using Org.Apps.SystemManager.Presentation.Models;
+@using Org.Apps.BaseDao.Model.Response;
+@using Microsoft.Web.Administration;
+
+@{
+    string urlMetric = Url.Action("ServiceOpMetrics");    
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@Resources.Global.MenuOperationalMetrics</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<table id="serviceListTable" class="display compact">
+
+    <thead>
+        <tr>
+            <th></th>
+            <th>@Resources.Global.Service</th>
+        </tr>
+    </thead>
+
+    <tbody></tbody>
+
+</table>
+
+<script type="text/javascript">
+
+    var tableData = new Array();
+    var stateIcons = new Array('', '../Images/bullet_green.png', '', '../Images/bullet_red.png', '../Images/bullet_yellow.png');
+    var stateTitles = new Array('', '@Resources.Global.Started', '', '@Resources.Global.Stopped', '@Resources.Global.Other');
+
+    @if (ViewBag.Result == Result.OK)
+    {
+        foreach (Apps Apps in ViewBag.ResultList)
+        {
+    <text>
+    tableData.push({
+        "ApplicationName": "@Apps.ApplicationName"
+        , "HostName": "@Apps.HostName"
+        , "SiteName": "@Apps.SiteName"
+        , "State": "@((int)Apps.State)"
+    });
+    </text>
+        }
+    }
+
+    $("#serviceListTable").DataTable({
+        data: tableData
+        , order: [[1, 'asc']]
+        , language: DataTableLanguage
+        , columnDefs: [
+            {
+                targets: 0
+                , width: 24
+                , orderable: false
+                , searchable: false
+                , data: function (row) {
+                    return '<img class="gridRowInlineLink" src="' + stateIcons[row.State] + '" title="' + stateTitles[row.State] + '" />';
+                }
+            }
+            , {
+                targets: 1
+                , data: function (row) {
+                    return '<a href="@urlMetric?HostName='+row.HostName+'&SiteName='+row.SiteName+'&ApplicationName='+row.ApplicationName+'">' + row.HostName + ">" + row.SiteName + ">" + row.ApplicationName + '</a>';
+                }
+            }
+        ]
+    });
+</script>
+

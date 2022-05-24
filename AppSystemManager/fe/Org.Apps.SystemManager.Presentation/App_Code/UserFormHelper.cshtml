@@ -1,0 +1,32 @@
+﻿@helper UserForm(
+                string operation,
+                Org.Apps.AuthManager.Data.Model.User model) 
+{
+    bool isAdd = operation.Equals("Add");
+    bool isEdit = operation.Equals("Edit");
+
+    <li>
+        <label>@Resources.Global.UserName</label>
+        @Html.TextBox(model.UserName, model.UserName)
+        @Html.ValidationMessage(model.UserName)
+    </li>
+    <li>
+        <label>@Resources.Global.Email</label>
+        <input id="Email" name="Email" type="text" value="@model.Email" />
+    </li>
+    
+    if (isAdd || isEdit)
+    {
+        <li>
+            <label>@Resources.Global.Name</label>
+            <input id="FirstName" name="FirstName" type="text" value="@model.FirstName" />
+        </li>
+        <li>
+            <label>@Resources.Global.LastName</label>
+            <input id="LastName" name="LastName" type="text" value="@model.LastName" />
+        </li>
+
+    }
+
+}
+

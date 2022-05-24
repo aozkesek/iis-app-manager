@@ -1,0 +1,5 @@
+/home/aozkesek/workspace/codes/dotnet/iis-app-manager/AppInstall/obj/Debug/net6.0/AppInstall.csproj.AssemblyReference.cache
+/home/aozkesek/workspace/codes/dotnet/iis-app-manager/AppInstall/obj/Debug/net6.0/AppInstall.GeneratedMSBuildEditorConfig.editorconfig
+/home/aozkesek/workspace/codes/dotnet/iis-app-manager/AppInstall/obj/Debug/net6.0/AppInstall.AssemblyInfoInputs.cache
+/home/aozkesek/workspace/codes/dotnet/iis-app-manager/AppInstall/obj/Debug/net6.0/AppInstall.AssemblyInfo.cs
+/home/aozkesek/workspace/codes/dotnet/iis-app-manager/AppInstall/obj/Debug/net6.0/AppInstall.csproj.CoreCompileInputs.cache
