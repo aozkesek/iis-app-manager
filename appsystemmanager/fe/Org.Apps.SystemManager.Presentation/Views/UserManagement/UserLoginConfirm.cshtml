@@ -1,0 +1,49 @@
+﻿@using Org.Apps.SystemManager.Presentation.Models;
+@using System.Web.Mvc;
+
+@model UserLogin
+      
+    @section featured {
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>@Resources.Global.LogonMessage</h1>
+                </hgroup>
+            </div>
+        </section>
+    }
+
+
+    @using (Html.BeginForm("UserLogin", "UserManagement", FormMethod.Post, new { @id = "loginForm" }))
+    {
+        @CommonComponentHelper.FormValidate("loginForm")
+        
+        @Html.AntiForgeryToken()
+        
+        @CommonComponentHelper.ValidationErrorSummary(ViewData.ModelState)
+
+        <fieldset>
+            <ol>
+                <li>
+                    @CommonComponentHelper.UsernameBox(Model.UserName, ViewData.ModelState)
+                </li>
+                <li>
+                    @CommonComponentHelper.PasswordBox(Model.Password, ViewData.ModelState)
+                </li>
+                @if (ViewBag.ForgottenPasswordLink == true)
+                {
+                    <li>
+                        @Html.ActionLink(@Resources.Global.PasswordForgotten, "UserPasswordRenewConfirm", "UserManagement")
+                    </li>
+                }
+                <li>
+                    <input type="submit" value="@Resources.Global.Logon" />
+                </li>
+            </ol>
+        </fieldset>
+    
+        
+        
+    }
+
+

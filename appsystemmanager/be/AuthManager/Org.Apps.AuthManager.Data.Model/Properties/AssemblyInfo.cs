@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AppsInstall")]
+[assembly: AssemblyTitle("Org.Apps.AuthManager.Data.Model")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AppsInstall")]
+[assembly: AssemblyProduct("Org.Apps.AuthManager.Data.Model")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1e1a8a0f-72d1-435d-a0d5-5ea7e5397845")]
+[assembly: Guid("53eb1242-6d5f-4580-b686-66923efd4a6c")]
 
 // Version information for an assembly consists of the following four values:
 //

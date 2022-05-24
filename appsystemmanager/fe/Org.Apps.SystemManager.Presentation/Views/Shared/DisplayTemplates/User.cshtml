@@ -1,0 +1,10 @@
+﻿@model Org.Ipps.AuthManager.Data.Model.User
+
+<li>
+    @Html.ActionLink("Güncelle", "UserEdit", "UserManagement")
+    @Html.ActionLink("Sil", "UserRemove", "UserManagement")
+    @Model.UserId
+    @Model.Name
+    @Model.Surname
+    @Model.EMail
+</li>

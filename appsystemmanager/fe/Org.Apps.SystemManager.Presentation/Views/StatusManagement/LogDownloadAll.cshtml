@@ -1,0 +1,78 @@
+﻿@using Org.Apps.BaseDao.Model.Response;
+@using Org.Apps.BaseService;
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@Resources.Global.LogDownloadAllTitle</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+@using (Html.BeginForm("StatusList", "StatusManagement", FormMethod.Get))
+{
+    <fieldset>
+        <ol>
+            <li>
+                <input type="submit" value="@Resources.Global.Cancel" />
+                <button onclick="LogFileDownload_DownloadAll();">@Resources.Global.LogDownloadAll</button>
+            </li>
+        </ol>
+    </fieldset>
+}
+
+    <table id="logTable" class="display compact">
+
+        <thead>
+            <th>@Resources.Global.Logs</th>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table> 
+
+
+@section Scripts {
+
+<script type="text/javascript">
+
+    var tableData = new Array();
+
+    function LogFileDownload_DownloadAll() {
+        tableData.forEach(
+            function (v, i) {
+                console.log(i);
+                console.log(v);
+                console.log(v.LogFileContent + v.LogFileName);
+                window.open(v.LogFileContent + v.LogFileName, "filedownloadwindows_" + i);
+            });
+    }
+
+    @if(ViewBag.Result == Result.OK)
+    {
+        foreach (AppsLogFile logFile in ViewBag.ResultList)
+        {
+    <text>
+    tableData.push({"LogFileContent": "@logFile.LogFileContent", "LogFileName": "@logFile.LogFileName"});
+    </text>
+        }
+    }
+
+    $("#logTable").DataTable({
+        data: tableData
+        , language: DataTableLanguage
+        , columnDefs: [
+            {
+                targets: 0
+                , data: function (row) {
+                    return '<a href="'+row.LogFileContent+row.LogFileName+'">'+row.LogFileName+'</a>';
+                }
+            }
+        ]
+    });
+
+</script>
+}

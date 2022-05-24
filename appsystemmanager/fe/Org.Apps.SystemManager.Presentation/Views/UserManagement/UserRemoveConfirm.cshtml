@@ -1,0 +1,51 @@
+﻿@using Org.Apps.AuthManager.Data.Model;
+@using System.Web.Mvc;
+
+@model User
+
+@{
+    var urlUserList = Url.Action("UserList");
+}
+    @section featured {
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>@Resources.Global.UserRemoveTitle</h1>
+                </hgroup>
+            </div>
+        </section>
+    }
+
+
+    @using (Html.BeginForm("UserRemove", "UserManagement", FormMethod.Post, new { id="userForm" }))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(m => m.UserId)
+        <fieldset>
+            <ol>
+                <li>
+                    @Html.Label(Resources.Global.UserName)
+                    @Html.TextBoxFor(m => m.UserName, new { @readonly="readonly" })
+                </li>
+                <li>
+                    @Html.Label(Resources.Global.Email)
+                    @Html.TextBoxFor(m => m.Email, new { @readonly = "readonly" })
+                </li>
+                <li>
+                    @Html.Label(Resources.Global.Name)
+                    @Html.TextBoxFor(m => m.FirstName, new { @readonly = "readonly" })
+                </li>
+                <li>
+                    @Html.Label(Resources.Global.LastName)
+                    @Html.TextBoxFor(m => m.LastName, new { @readonly = "readonly" })
+                </li>
+                <li>
+                    <input type="submit" value="@Resources.Global.Cancel" class="cancel" onclick="$('#userForm').Apps_SubmitTo('@urlUserList', 'get');" />
+                    <input type="submit" value="@Resources.Global.UserRemove" />
+                </li>
+            </ol>
+        </fieldset>
+
+    
+    }

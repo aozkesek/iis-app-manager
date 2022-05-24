@@ -1,0 +1,78 @@
+﻿@using Org.Apps.BaseDao.Model.Response;
+@using Org.Apps.LogManager.Data.Model;
+@using System.Web.Mvc;
+
+@model AppsModule
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@Resources.Global.LogInfo</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+    
+@using (Html.BeginForm("LogReset", "StatusManagement", FormMethod.Post, new { @id="resetForm"}))
+{
+    @Html.AntiForgeryToken()
+       
+    <input type="hidden" name="ModuleId" value="@ViewBag.ModuleId" />
+    <input type="hidden" name="ModuleName" value="@ViewBag.ModuleName" />
+    <input type="hidden" name="CheckedBy" value="@ViewBag.CheckedBy" />
+    
+    <p style="display:@(ViewBag.Result == Result.OK ? "" : "none")">
+        <input type="submit" value="@Resources.Global.LogReset" />
+    </p>
+        
+}
+
+<table id="logListTable" class="display compact">
+    <thead>
+        <tr>
+            <th>@Resources.Global.CreateDate</th>
+            <th>@Resources.Global.Service</th>
+            <th>@Resources.Global.LogLevel</th>
+            <th>@Resources.Global.LogInfo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (ViewBag.Result == Result.OK)
+        {
+            foreach (AppsLog log in ViewBag.ResultList)
+            {
+                <tr>
+                    <td>
+                        @log.CreateDate
+                    </td>
+
+                    <td>
+                        @log.LogModuleName
+                    </td>
+
+                    <td>
+                        @log.LogLevelId
+                    </td>
+
+                    <td>
+                        <textarea readonly>
+                            @log.LogMessage
+                        </textarea>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+
+</table>
+
+<script type="text/javascript">
+
+    $("#logListTable").DataTable({
+        language: DataTableLanguage 
+    });
+
+
+</script>

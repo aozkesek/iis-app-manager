@@ -1,0 +1,65 @@
+﻿@using Org.Apps.SystemManager.Presentation.Models;
+@using Org.Apps.BaseDao.Model.Response;
+@using Org.Apps.BaseService;
+
+@using System.Web.Mvc;
+@using System.Resources;
+
+@model Apps
+
+@{
+    string headerStr;
+    string urlMetric = Url.Action("ServiceOpMetricDetail");
+    ResourceManager resman = Resources.Global.ResourceManager;
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@Resources.Global.MenuOperationalMetrics - @Model.ApplicationName - @ViewBag.Name</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<table id="serviceListTable" class="display compact">
+
+    <thead>
+        <tr>
+            @foreach (string header in ViewBag.Headers)
+            {
+                if (!string.IsNullOrEmpty(header))
+                {
+                    headerStr = resman.GetString(header);
+
+                    <th>@(string.IsNullOrEmpty(headerStr) ? header : headerStr)</th>
+                }
+
+            }
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (ViewBag.Result == Result.OK)
+        {
+            foreach (var row in ViewBag.ResultList.Data)
+            {
+        <tr>
+                @foreach (var col in row)
+                {
+                    <td>@col</td>
+                }
+        </tr>
+            }
+        }
+    </tbody>
+
+</table>
+
+<script type="text/javascript">
+    $("#serviceListTable").DataTable({
+        language: DataTableLanguage
+    });
+</script>
+
